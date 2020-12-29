@@ -1,0 +1,31 @@
+﻿@model PartialViewExample.Models.Numbers
+
+@{
+    ViewData["Title"] = "Sum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Sum</h1>
+
+<div>
+    <h4>Numbers</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.a)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.a)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.b)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.b)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
